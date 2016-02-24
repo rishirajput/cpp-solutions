@@ -1,0 +1,63 @@
+//	http://codeforces.com/problemset/problem/158/B
+
+#include<iostream>
+#include<algorithm>
+using namespace::std;
+int main()
+{
+    int n,a,c1=0,c2=0,c3=0;
+    cin>>n;
+    int s[n];
+    int count=0;
+    int i=0;
+    while(i<n)
+    {
+        cin>>a;
+        if(a==4)
+        {
+            count++;
+        }
+        else if(a==3)
+        {
+            c3++;
+        }
+        else if(a==2)
+        {
+            c2++;
+        }
+        else if(a==1)
+        {
+            c1++;
+        }
+        i++;
+    }
+    //sort(s,s+n);
+    if(c3>=c1)
+    {
+        count+=c3;
+        c1=0;
+    }
+    else
+    {
+        count+=c3;
+        c1=c1-c3;
+
+    }
+    c2+=c1/2;
+    c1=c1%2;
+    //
+    if(c2)
+    {
+        count+=c2/2;
+        if(c2%2)
+            count++;
+        else
+            count+=c1;
+    }
+    else
+    {
+        count+=c1;
+    }
+    cout<<count<<endl;
+    return 0;
+}
