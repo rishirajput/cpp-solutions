@@ -1,0 +1,46 @@
+//	http://codeforces.com/problemset/problem/131/A
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	string s;
+	bool flag=1;
+	int i=1;
+    cin>>s;
+   while(i<s.length())
+   {
+       if(s[i]>=65&&s[i]<=90)
+        flag=1;
+       else
+       {
+
+        flag=0;
+        break;
+       }
+       i++;
+   }
+   i=1;
+   if(flag==1)
+      {
+        if((s[0]>=97&&s[0]<=122))
+            {
+                s[0]=s[0]-32;
+            }
+        else
+        {
+            s[0]=s[0]+32;
+        }
+            while(i<s.length())
+            {
+                s[i]=s[i]+32;
+                i++;
+
+            }
+
+      }
+      cout<<s<<endl;
+	return 0;
+}
