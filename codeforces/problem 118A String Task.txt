@@ -1,0 +1,22 @@
+//	http://codeforces.com/problemset/problem/118/A
+
+#include <iostream>
+
+
+using namespace std;
+
+int main()
+{
+	short n,i=0;
+	char c;
+	string s;
+	cin>>s;
+	while(i<s.length())
+    {   if(!(s[i]=='A'||s[i]=='E'||s[i]=='I'||s[i]=='O'||s[i]=='U'||s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u'||s[i]=='Y'||s[i]=='y'))
+            {c=tolower(s[i]);
+            cout<<"."<<c;
+            }
+       i++;
+    }cout<<endl;
+	return 0;
+}
