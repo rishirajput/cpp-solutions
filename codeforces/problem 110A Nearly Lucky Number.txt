@@ -1,0 +1,24 @@
+//	http://codeforces.com/problemset/problem/110/A
+
+#include<iostream>
+using namespace std;
+int main()
+{   long long l;
+    short j=0;
+    cin>>l;
+    while(l)
+    {
+        if((l%10==4)||(l%10==7))
+        {
+            j++;
+        }
+        l=l/10;
+    }
+    if(j==4||j==7)
+    {
+        cout<<"YES";
+    }
+    else
+        cout<<"NO";
+    return 0;
+}
