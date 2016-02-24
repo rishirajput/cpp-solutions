@@ -1,0 +1,28 @@
+//	http://codeforces.com/problemset/problem/313/A
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    if(n>0)
+        cout<<n;
+    else
+        {short a,b;
+        n=abs(n);
+        a=n%10;
+        n=n/10;
+        b=n%10;
+        if(a>b)
+        {
+            cout<<-1*n;
+        }
+        else
+        cout<<-1*((n/10)*10+a);
+        }
+
+
+    return 0;
+}
+

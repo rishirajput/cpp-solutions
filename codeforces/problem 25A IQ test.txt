@@ -1,0 +1,36 @@
+//	http://codeforces.com/problemset/problem/25/A
+
+#include <bits/stdc++.h>
+#include<algorithm>
+using namespace std;
+int main()
+{
+    short a,b,c,e=0,o=0,i=0,n;
+    cin>>n;
+    while(i<n)
+    {
+        cin>>a;
+        if(a%2==0)
+            {e++;
+            b=i+1;
+            }
+
+        else
+            {o++;
+            c=i+1;
+            }
+            if(e>1&&o>0)
+            {
+                cout<<c;
+                break;
+            }
+            else if(o>1&&e>0)
+            {
+                cout<<b;
+                break;
+            }
+
+        i++;
+    }
+    return 0;
+}

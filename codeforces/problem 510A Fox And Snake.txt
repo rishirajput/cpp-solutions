@@ -1,0 +1,61 @@
+//	http://codeforces.com/problemset/problem/510/A
+
+
+#include <iostream>
+using namespace std;
+int main()
+{
+int n,m;
+cin>>n>>m;
+bool f=0;
+int j=0;
+int i=0;
+while(i<m)
+{
+    cout<<"#";
+    i++;
+}
+cout<<endl;
+n--;
+while(j<n/2)
+{
+    if(f==0)
+    {   i=0;
+        while(i<m-1)
+        {
+            cout<<".";
+            i++;
+        }
+        cout<<"#"<<endl;
+        i=0;
+        while(i<m)
+        {
+            cout<<"#";
+            i++;
+        }
+        cout<<endl;
+        f=1;
+    }
+    else
+    {   i=0;
+        cout<<"#";
+        while(i<m-1)
+        {
+            cout<<".";
+            i++;
+        }
+        i=0;
+        cout<<endl;
+        while(i<m)
+        {
+            cout<<"#";
+            i++;
+        }
+        f=0;
+        cout<<endl;
+    }
+    j++;
+}
+
+return 0;
+}

@@ -1,0 +1,28 @@
+//	http://codeforces.com/problemset/problem/443/A
+
+
+#include <iostream>
+#include<set>
+using namespace std;
+int main()
+{
+set<char> c;
+string s;
+getline( std::cin, s );
+if(s.length()!=2)
+{
+
+
+int i=1;
+while(i<s.length())
+{
+    c.insert(s[i]);
+    i+=3;;
+}
+
+cout<<c.size();
+}
+else
+    cout<<0;
+return 0;
+}

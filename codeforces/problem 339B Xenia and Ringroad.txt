@@ -1,0 +1,28 @@
+//	http://codeforces.com/problemset/problem/339/B
+
+#include <bits/stdc++.h>
+//#include <stdio.h>
+#include <math.h>
+using namespace std;
+int main()
+{
+    int n,m;
+    cin>>n;
+    cin>>m;
+    int i=0;
+    int a;
+    int b=1;
+    long long c=0;
+    while(i<m)
+    {
+        cin>>a;
+        if(b>a)
+            c+=n-b+a;
+        else
+            c+=abs(b-a);
+        b=a;
+        i++;
+    }
+    cout<<c;
+    return 0;
+}

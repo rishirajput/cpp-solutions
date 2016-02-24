@@ -1,0 +1,52 @@
+//	http://codeforces.com/problemset/problem/122/A
+
+#include<iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+	int n, i = 1, m;
+	bool flag = 0,f=0;
+	cin >> n;
+
+	while (i <= n)
+	{
+
+		m = i;
+		while (m)
+		{
+
+
+			if (!(m % 10 == 4 || m % 10 == 7))
+			{
+				flag = 0;
+
+
+			}
+
+
+
+
+			m = m / 10;
+
+
+		}
+		if (flag == 1)
+		{
+			if (n%i == 0)
+			{
+				cout << "YES";
+				f=1;
+				break;
+			}
+
+		}
+		flag = 1;
+		i++;
+	}
+	if (f == 0)
+		cout << "NO";
+
+	return 0;
+
+}

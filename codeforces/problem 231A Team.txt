@@ -1,0 +1,27 @@
+//	http://codeforces.com/problemset/problem/231/A
+
+#include <iostream>
+
+
+using namespace std;
+
+int main()
+{
+	short n,i=0;
+	bool a,b,c;
+	cin>>n;
+	while(n)
+    {   cin>>a>>b>>c;
+        if(a&b)
+            i++;
+          else  if(b&c)
+                i++;
+          else  if(a&c)
+                i++;
+
+
+        n--;
+    }
+    cout<<i<<endl;
+	return 0;
+}

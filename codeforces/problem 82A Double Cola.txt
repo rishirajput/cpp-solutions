@@ -1,0 +1,90 @@
+//	http://codeforces.com/problemset/problem/82/A
+
+#include<iostream>
+#include<math.h>
+#include<stdlib.h>
+using namespace::std;
+int main()
+{
+
+    int n,m=0,o=0,q=0,r,s,t;
+    cin>>n;
+    switch(n)
+    {
+    case 1:  cout<<"Sheldon"<<endl;
+        break;
+    case 2: cout<<"Leonard"<<endl;
+        break;
+    case 3: cout<<"Penny"<<endl;
+        break;
+    case 4: cout<<"Rajesh"<<endl;
+        break;
+    case 5: cout<<"Howard"<<endl;
+        break;
+    default:
+    int p=0;
+    while(o<=n)
+    {
+        o=m+(pow(2,p)*5);
+        if(o<=n)
+        m=o;
+        p++;
+    }
+    p--;
+    q=pow(2,p);
+    s=abs(n-m);
+    t=abs(o-n);
+    if(s<t)
+       {
+           if(s==0)
+           {
+               cout<<"Howard"<<endl;
+
+           }
+           else
+           {
+           r= s/q;
+            r++;
+
+
+            switch (r){
+            case 1: cout<<"Sheldon"<<endl;
+            break;
+            case 2: cout<<"Leonard"<<endl;
+            break;
+            case 3: cout<<"Penny"<<endl;
+            break;
+            case 4: cout<<"Rajesh"<<endl;
+            break;
+            case 5: cout<<"Howard"<<endl;
+            break;
+
+            }
+           }
+       }
+    else
+        {
+
+            q=pow(2,p);
+            r=t/q;
+            if(t%q>0)
+                r++;
+            switch (r){
+            case 1: cout<<"Howard"<<endl;
+            break;
+            case 2: cout<<"Rajesh"<<endl;
+            break;
+            case 3: cout<<"Penny"<<endl;
+            break;
+            case 4: cout<<"Leonard"<<endl;
+            break;
+            case 5: cout<<"Sheldon"<<endl;
+            break;
+
+            }
+
+
+        }
+        break;
+    }
+}

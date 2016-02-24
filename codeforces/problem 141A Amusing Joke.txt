@@ -1,0 +1,23 @@
+//	http://codeforces.com/problemset/problem/141/A
+
+#include <iostream>
+#include<algorithm>
+using namespace std;
+int main()
+{
+string s1,s2,s3;
+cin>>s1>>s2>>s3;
+s1.append(s2);
+if(s1.length()==s3.length())
+{
+    sort(s1.begin(),s1.end());
+    sort(s3.begin(),s3.end());
+    if(s1==s3)
+        cout<<"YES";
+    else
+        cout<<"NO";
+}
+else
+    cout<<"NO";
+return 0;
+}

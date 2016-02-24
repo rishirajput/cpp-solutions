@@ -1,0 +1,14 @@
+//	http://codeforces.com/problemset/problem/50/A
+
+#include <iostream>
+
+
+using namespace std;
+
+int main()
+{
+	short n,i;
+	cin>>n>>i;
+	cout<<(n*i)/2<<endl;
+	return 0;
+}

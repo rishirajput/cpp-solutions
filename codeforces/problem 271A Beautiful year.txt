@@ -1,0 +1,39 @@
+//	http://codeforces.com/problemset/problem/271/A
+
+#include<iostream>
+using namespace std;
+int main()
+{   int y,a[4],e,i=0,j;
+    bool g=1;
+    cin>>y;
+    y++;
+    while(g)
+    {   e=y;
+        i=0;
+        while(i<4)
+        {
+            a[i]=e%10;
+            e=e/10;
+            i++;
+        }
+        i=0;
+        while(i<3)
+        {
+           j=i+1;
+           while(j<4)
+           {
+               if(a[i]==a[j])
+                g=0;
+
+                j++;
+           }
+           i++;
+        }
+        if(g==1)
+            break;
+        g=1;
+        y++;
+    }
+    cout<<y;
+    return 0;
+}

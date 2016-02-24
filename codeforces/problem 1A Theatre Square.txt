@@ -1,0 +1,25 @@
+//	http://codeforces.com/problemset/problem/1/A
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	long long n,m,a;
+	cin>>n>>m>>a;
+	long long b=n%a;
+	long long c=m%a;
+	long long d=n/a;
+	long long e=m/a;
+	if(b!=0)
+    {
+        d++;
+    }
+    if(c!=0)
+    {
+        e++;
+    }
+    cout<<d*e;
+	return 0;
+}

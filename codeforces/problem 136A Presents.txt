@@ -1,0 +1,25 @@
+//	http://codeforces.com/problemset/problem/136/A
+
+#include<iostream>
+using namespace std;
+
+int main()
+{   int n;
+    cin>>n;
+    int i=1;
+    int p[n+1];
+    int a;
+    while(i<=n)
+    {   cin>>a;
+        p[a]=i;
+
+        i++;
+    }
+    i=1;
+    while(i<=n)
+    {
+        cout<<p[i]<<" ";
+        i++;
+    }
+    return 0;
+}

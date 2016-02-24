@@ -1,0 +1,37 @@
+//	http://codeforces.com/problemset/problem/237/A
+
+#include <bits/stdc++.h>
+#include<algorithm>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int i=0;
+    int a,b,c,d;
+    cin>>a>>b;
+    n--;
+    int e=1,f=0;
+    while(i<n)
+    {
+        cin>>c>>d;
+        if(a==c&&b==d)
+        {
+            e++;
+        }
+        else
+            e=1;
+            if(e>f)
+            f=e;
+
+
+        a=c;
+        b=d;
+        i++;
+    }
+    if(f)
+    cout<<f;
+    else
+    cout<<e;
+    return 0;
+}

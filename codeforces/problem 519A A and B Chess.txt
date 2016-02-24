@@ -1,0 +1,53 @@
+//	http://codeforces.com/problemset/problem/519/A
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+  string s;
+  short i=0,j=0;
+  short black =0,white =0;
+  while(i<8)
+  {
+      cin>>s;
+      while(j<s.length())
+      {
+          switch(s[j])
+          {
+            case 'Q': white+=9;
+            break;
+            case 'R': white+=5;
+            break;
+            case 'B': white+=3;
+            break;
+            case 'N': white+=3;
+            break;
+            case 'P' : white+=1;
+            break;
+            case 'q': black+=9;
+            break;
+            case 'r':black+=5;
+            break;
+            case 'b':black+=3;
+            break;
+            case 'n':black+=3;
+            break;
+            case 'p':black+=1;
+            break;
+          }
+          j++;
+          }
+          j=0;
+          i++;
+      }
+      if(black>white)
+      {
+          cout<<"Black";
+      }
+      else if(black<white)
+        cout<<"White";
+      else
+        cout<<"Draw";
+      return 0;
+  }
+

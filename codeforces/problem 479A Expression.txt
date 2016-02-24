@@ -1,0 +1,31 @@
+//	http://codeforces.com/problemset/problem/479/A
+
+#include <iostream>
+using namespace std;
+int main()
+{
+int a,b,c;
+cin>>a>>b>>c;
+int max=0;
+int d;
+d=a+b*c;
+if(d>max)
+    max=d;
+d=a*(b+c);
+if(d>max)
+    max=d;
+d=(a*b)+c;
+if(d>max)
+    max=d;
+d=a*b*c;
+if(d>max)
+    max=d;
+d=a+b+c;
+if(d>max)
+    max=d;
+d=(a+b)*c;
+if(d>max)
+    max=d;
+cout<<max;
+    return 0;
+}

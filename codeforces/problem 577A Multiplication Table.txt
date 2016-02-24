@@ -1,0 +1,23 @@
+//	http://codeforces.com/problemset/problem/577/A
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    long x,c=0;
+    cin>>n>>x;
+    int i=1,j=1;
+    n++;
+    while(i<n)
+    {
+        if(x%i==0)
+        {
+            if(x/i<n)
+                c++;
+        }
+        i++;
+    }
+    cout<<c;
+    return 0;
+}

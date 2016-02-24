@@ -1,0 +1,34 @@
+//	http://codeforces.com/problemset/problem/339/A
+
+#include <iostream>
+#include<algorithm>
+using namespace std;
+int main()
+{
+	string s;
+	cin>>s;
+	short b=0;
+	char c;
+	short i=0,a[s.length()];
+	while(i<s.length())
+    {
+
+        if(!(s[i]=='+'))
+        {
+                a[b]= s[i]-48;
+                b++;
+        }
+        i++;
+    }
+	sort(a,a+b);
+	i=1;
+	cout<<a[0];
+	while(i<b)
+    {
+        cout<<"+"<<a[i];
+        i++;
+    }
+    cout<<endl;
+    return 0;
+
+}

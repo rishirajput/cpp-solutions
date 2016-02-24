@@ -1,0 +1,33 @@
+//	http://codeforces.com/problemset/problem/266/B
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{  int n,t;
+cin>>n>>t;
+char c;
+int i=0;
+string s;
+cin>>s;
+int j=0;
+while(i<t)
+{
+    while(j<s.length())
+    {
+        if(s[j]=='B'&&s[j+1]=='G')
+        {
+            s[j]='G';
+            s[j+1]='B';
+            j++;
+        }
+        j++;
+    }
+    j=0;
+
+    i++;
+}
+cout<<s;
+    return 0;
+}

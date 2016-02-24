@@ -1,0 +1,99 @@
+http://codeforces.com/problemset/problem/119/A
+
+#include<iostream>
+using namespace std;
+int gcd(int, int);
+bool f = 0;
+int g;
+int a, b, n;
+bool S, A;
+void play()
+{
+
+	if (f == 0)
+	{
+		g = gcd(a, n);
+		if (g<=n&&g!=0)
+		{
+			n = n - g;
+			f = 1;
+			play();
+		}
+		else
+		{
+			cout << '1';
+			return;
+		}
+
+	}
+	else{
+		g = gcd(b, n);
+		if (g<=n&&g!=0)
+		{
+			n = n - g;
+			f = 0;
+			play();
+		}
+		else
+		{
+			cout << '0';
+			return;
+		}
+
+	}
+
+}
+int main()
+{
+
+
+	cin >> a >> b >> n;
+	play();
+	return 0;
+
+
+
+}
+int gcd(int a, int n)
+{
+	if (n == 0 || a == 0)
+		return 0;
+	int c = a;
+	if (a<n)
+	{
+		while (a)
+		{
+			if (c%a == 0)
+			{
+				if (n%a == 0)
+				{
+					return a;
+
+				}
+			}
+			a--;
+		}
+
+	}
+	else if (a>n)
+
+	{
+		c = n;
+		while (n)
+		{
+			if (c%n == 0)
+			{
+				if (a%n == 0)
+				{
+					return n;
+				}
+			}
+			n--;
+		}
+	}
+	else
+	{
+		return n;
+	}
+
+}

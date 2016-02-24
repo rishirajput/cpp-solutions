@@ -1,0 +1,37 @@
+//	http://codeforces.com/problemset/problem/427/A
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int i=0;
+    int a;
+    int s=0;
+    int c=0;
+    while(i<n)
+    {
+            cin>>a;
+            s+=a;
+            if(s<0)
+            {c++;
+                s=0;
+            }
+           /* if(a==-1)
+            {
+                if(s<1)
+                   c++;
+                else
+                s--;
+
+            }
+            else
+            {
+                 s+=a;
+            }*/
+            i++;
+    }
+    cout<<c;
+    return 0;
+}

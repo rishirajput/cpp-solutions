@@ -1,0 +1,26 @@
+//	http://codeforces.com/problemset/problem/148/A
+
+#include<iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+    short k,l,m,n;
+    long d,i=0;
+    cin>>k>>l>>m>>n>>d;
+    while(d)
+    {  if(d%k==0)
+        i++;
+        else if(d%l==0)
+            i++;
+        else if(d%m==0)
+            i++;
+        else if(d%n==0)
+            i++;
+
+        d--;
+    }
+  cout<<i<<endl;
+    return 0;
+
+}

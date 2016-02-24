@@ -1,0 +1,22 @@
+//	http://codeforces.com/problemset/problem/546/A
+
+#include <bits/stdc++.h>
+#include<algorithm>
+using namespace std;
+int main()
+{
+ int k,n,w;
+ cin>>k>>n>>w;
+ int i=1;
+ int a=0;
+ while(i<=w)
+ {
+     a+=i*k;
+     i++;
+ }
+ if(a>n)
+    cout<<a-n;
+ else
+    cout<<0;
+    return 0;
+}

@@ -1,0 +1,30 @@
+//	http://codeforces.com/problemset/problem/160/A
+
+#include <iostream>
+#include<algorithm>
+using namespace std;
+int main()
+{
+	short n,s=0,s1=0,n1,i=0;
+	cin>>n;
+	short a[n];
+	while(i<n)
+    {
+        cin>>a[i];
+        s+=a[i];
+        i++;
+    }
+    sort(a,a+n);
+    n1=n-1;
+    while(n1>-1)
+    {   s1+=a[n1];
+        s-=a[n1];
+        if(s1>s)
+            break;
+        n1--;
+    }
+    n1=n-n1;
+    cout<<n1<<endl;
+
+    return 0;
+}

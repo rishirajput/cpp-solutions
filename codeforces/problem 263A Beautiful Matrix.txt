@@ -1,0 +1,27 @@
+//	http://codeforces.com/problemset/problem/263/A
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{   int i=1,j=1,a;
+ int n,m;
+    while(i<6)
+    {
+        while(j<6)
+        {cin>>a;
+        if(a==1)
+           {
+            n=i;
+            m=j;
+           }
+            j++;
+        }
+        j=1;
+        i++;
+    }
+
+    cout<<abs(n-3)+abs(m-3);
+    return 0;
+}

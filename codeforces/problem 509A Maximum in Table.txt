@@ -1,0 +1,50 @@
+//	http://codeforces.com/problemset/problem/509/A
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int i=0;
+    int a[n][n];
+    int j=0;
+    while(i<n)
+    {
+        while(j<n)
+        {
+            a[i][j]=0;
+            j++;
+        }
+        i++;
+    }
+    i=0;
+    j=0;
+    if(n==1)
+        cout<<1;
+    else
+    {
+
+    while(i<n)
+    {
+        while(j<n)
+        {
+            if(i==0||j==0)
+            {
+                a[i][j]=1;
+
+            }
+            else
+                {a[i][j]=a[i-1][j]+a[i][j-1];
+
+                }
+                j++;
+        }
+        j=0;
+
+        i++;
+    }
+    cout<<a[n-1][n-1];
+    }
+
+}

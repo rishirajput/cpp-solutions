@@ -1,0 +1,26 @@
+//	http://codeforces.com/problemset/problem/133/A
+
+#include <iostream>
+
+using namespace std;
+int main()
+{
+	string p;
+	bool flag=0;
+	short i=0;
+	cin>>p;
+	while(i<p.length())
+    {
+        if(p[i]=='H'||p[i]=='Q'||p[i]=='9')
+        {
+            flag=1;
+            break;
+        }
+        i++;
+    }
+    if(flag==1)
+        cout<<"YES"<<endl;
+    else
+        cout<<"NO"<<endl;
+    return 0;
+}

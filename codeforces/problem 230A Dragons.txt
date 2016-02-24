@@ -1,0 +1,35 @@
+//	http://codeforces.com/problemset/problem/230/A
+
+#include <bits/stdc++.h>
+#include<algorithm>
+using namespace std;
+int main()
+{
+    int s,n;
+    cin>>s>>n;
+    int i=0;
+    pair<int, int> a[n];
+
+    while(i<n)
+    {
+        cin>>a[i].first>>a[i].second;
+        i++;
+    }
+    sort(a,a+n);
+    i=0;
+    while(i<n)
+    {
+        if(s<=a[i].first)
+            {cout<<"NO"<<endl;
+            return 0;
+            }
+            else
+            {
+                s+=a[i].second;
+
+            }
+            i++;
+    }
+    cout<<"YES"<<endl;
+
+}

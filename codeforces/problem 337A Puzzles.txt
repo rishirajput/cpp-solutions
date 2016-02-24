@@ -1,0 +1,44 @@
+//	http://codeforces.com/problemset/problem/337/A
+
+#include <bits/stdc++.h>
+#include<algorithm>
+using namespace std;
+int main()
+{
+   int n,m;
+   cin>>n>>m;
+   int i=0;
+   int c=0;
+   int a[m];
+   int j=n;
+   int max=0,min=1000,mn=1000,b;
+
+   while(i<m)
+   {
+       cin>>a[i];
+       i++;
+   }
+    sort(a,a+m);
+   while(j<=m)
+   {
+       for(i=c;i<j;i++)
+       {
+           if(a[i]>max)
+            max=a[i];
+           if(a[i]<min)
+            min=a[i];
+       }
+       b=max-min;
+       if(b<mn)
+        mn=b;
+        max=0;
+        min=1000;
+
+       c++;
+       j++;
+
+   }
+
+cout<<mn;
+    return 0;
+}

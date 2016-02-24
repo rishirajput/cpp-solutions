@@ -1,0 +1,27 @@
+//	http://codeforces.com/problemset/problem/540/A
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{   int n;
+    cin>>n;
+    string s,s2;
+    short c,d,sum=0;
+    cin>>s>>s2;
+    int i=0;
+    while(i<s.length())
+    {   c=s[i]-'0';
+        d=s2[i]-'0';
+        if(abs(c-d)>5)
+        {
+            sum+=abs(abs(c-d)-10);
+        }
+        else
+            sum+=abs(c-d);
+        i++;
+
+    }
+    cout<<sum;
+    return 0;
+}
+

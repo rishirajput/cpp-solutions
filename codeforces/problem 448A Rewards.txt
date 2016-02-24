@@ -1,0 +1,27 @@
+//	http://codeforces.com/problemset/problem/448/A
+
+#include <iostream>
+#include<algorithm>
+using namespace std;
+int main()
+{
+int a1,a2,a3;
+
+int b1,b2,b3;
+int c,d;
+cin>>a1>>a2>>a3>>b1>>b2>>b3;
+int a=a1+a2+a3;
+int b=b1+b2+b3;
+int n;
+cin>>n;
+a%5!=0?c=1:c=0;
+(b%10!=0)?d=1:d=0;
+n=n-((a/5)+c+(b/10+d));
+if(n>=0)
+{
+    cout<<"YES";
+}
+else
+    cout<<"NO";
+return 0;
+}

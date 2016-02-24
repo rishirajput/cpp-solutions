@@ -1,0 +1,38 @@
+//	http://codeforces.com/problemset/problem/144/A
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int i=1;
+    n++;
+
+    int a,max=0,min=100,mx,mn;
+    while(i<n)
+    {
+        cin>>a;
+        if(a>max)
+        {
+            max=a;
+            mx=i;
+        }
+         if(a<=min)
+        {
+            min=a;
+            mn=i;
+        }
+        i++;
+    }
+    if(mx<mn)
+    {
+        cout<<(mx-2)+(n-mn);
+    }
+    else
+    {
+        mn++;
+        cout<<(mx-2)+(n-mn);
+    }
+    return 0;
+}

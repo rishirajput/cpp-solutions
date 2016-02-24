@@ -1,0 +1,45 @@
+//	http://codeforces.com/problemset/problem/59/A
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s;
+    cin>>s;
+    int i=0,j=0,k=0;
+    int a=0,A=0;
+    vector<int> b,B;
+    while(i<s.length())
+    {
+        if(s[i]>64&&s[i]<91)
+            {A++;
+            B.push_back(i);
+            }
+
+        else if(s[i]>96&&s[i]<123)
+            {a++;
+            b.push_back(i);
+            }
+            i++;
+    }
+    if(a<A)
+    {   i=0;
+        while(i<b.size())
+        {
+            s[b[i]]-=32;
+            i++;
+        }
+    }
+    else
+    {
+        i=0;
+        while(i<B.size())
+        {
+            s[B[i]]+=32;
+            i++;
+        }
+    }
+   cout<<s<<endl;
+
+        return 0;
+}

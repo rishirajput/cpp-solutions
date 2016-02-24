@@ -1,0 +1,39 @@
+//	http://codeforces.com/problemset/problem/500/A
+
+
+#include <bits/stdc++.h>
+#include<algorithm>
+using namespace std;
+int main()
+{
+long n,t;
+cin>>n>>t;
+bool f=0;
+int i=1;
+long a[n];
+while(i<n)
+{
+    cin>>a[i];
+    i++;
+}
+i=1;
+while(i<n)
+{
+    if((i+a[i])==t)
+    {
+        f=1;
+
+    }
+    else
+    {
+        i=i+a[i];
+        continue;
+    }
+    i++;
+}
+if(f==1)
+    cout<<"YES";
+else
+    cout<<"NO";
+    return 0;
+}
