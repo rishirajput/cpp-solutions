@@ -1,0 +1,32 @@
+//http://codeforces.com/problemset/problem/472/A
+#include<iostream>
+using namespace std;
+bool prime(long l)
+{   long i=2;
+    while(i<l)
+    {
+        if(l%i==0)
+            return 0;
+            i++;
+    }
+    return 1;
+}
+int main()
+{   long n;
+    cin>>n;
+    long i=2;
+    while(i<=(n-2))
+    {
+        if(!prime(i))
+        {
+            if(!prime(n-i))
+            {
+                cout<<i<<" "<<(n-i);
+                break;
+            }
+        }
+
+        i++;
+    }
+    return 0;
+}
