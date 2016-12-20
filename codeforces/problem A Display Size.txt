@@ -1,0 +1,34 @@
+//http://codeforces.com/contest/747/problem/A
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <iostream>
+using namespace std;
+int main()
+{
+    long n;
+    cin>>n;
+    bool butt=false;
+    for(long i=(long)sqrt(n);i>=0;i--)
+    {
+        if(i==0)
+            i=1;
+
+        for(long j=(long)sqrt(n);j<(n+1);j++)
+        {
+
+
+            if(i*j==n)
+            {
+                cout<<i<<" "<<j<<endl;
+                butt=true;
+                break;
+            }
+
+        }
+        if(butt)
+                break;
+    }
+    return 0;
+}

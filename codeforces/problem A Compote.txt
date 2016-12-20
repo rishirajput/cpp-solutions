@@ -1,0 +1,23 @@
+//http://codeforces.com/contest/746/problem/A
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a,b,c;
+    cin>>a>>b>>c;
+    for(int i=a;i>0;i--)
+    {
+
+        if(b>=2*i&&c>=4*i)
+        {
+            cout<<(i+(2*i)+(4*i))<<endl;
+            return 0;
+        }
+
+    }
+        cout<<0<<endl;
+    return 0;
+}
